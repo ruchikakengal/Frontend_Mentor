@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .card-shadow {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+            perspective: 100px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Form submitted successfully!');
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 min-h-screen flex items-center justify-center">
+
+  <div class="container mx-auto p-4">
+    <div class="bg-white rounded-lg p-6 card-shadow max-w-xl mx-auto card">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4 text-center">Contact Us</h1>
+
+        <form action="#" method="POST" class="space-y-4" onsubmit="handleSubmit(event)">
+            <div class="grid grid-cols-1 gap-4">
+                <div>
+                    <label for="name" class="block text-gray-600 font-medium mb-2">Name</label>
+                    <input type="text" id="name" name="name" required
+                        class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-600 font-medium mb-2">Email</label>
+                    <input type="email" id="email" name="email" required
+                        class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            </div>
+
+            <div>
+                <label for="subject" class="block text-gray-600 font-medium mb-2">Subject</label>
+                <input type="text" id="subject" name="subject" required
+                    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label for="message" class="block text-gray-600 font-medium mb-2">Message</label>
+                <textarea id="message" name="message" rows="4" required
+                    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+
+            <div class="flex justify-center">
+                <button type="submit"
+                    class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-2 px-4 rounded-md shadow-lg hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600">
+                    Send Message
+                </button>
+            </div>
+        </form>
+
+        <div class="mt-6 text-center">
+            <h2 class="text-lg font-semibold text-gray-800 mb-2">Contact Information</h2>
+            <p class="text-gray-600">Email: <a href="mailto:example@domain.com" class="text-blue-500">example@domain.com</a></p>
+            <p class="text-gray-600">Phone: <a href="tel:+1234567890" class="text-blue-500">+1 234 567 890</a></p>
+            <p class="text-gray-600">Address: 123, Main Street, Anytown, AN 12345</p>
+
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-blue-500 hover:text-blue-700">
+                    <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M22.46 6c-.77.34-1.6.57-2.46.68.88-.53 1.55-1.37 1.87-2.37-.83.5-1.76.86-2.75 1.05a4.27 4.27 0 0 0-7.28 3.89A12.1 12.1 0 0 1 3.64 4.64a4.26 4.26 0 0 0-.58 2.15c0 1.48.75 2.78 1.89 3.55-.7-.02-1.36-.21-1.94-.53v.05c0 2.07 1.48 3.8 3.45 4.19-.36.1-.74.15-1.13.15-.27 0-.55-.03-.81-.08.56 1.73 2.18 2.99 4.1 3.03A8.56 8.56 0 0 1 2 19.54a12.07 12.07 0 0 0 6.54 1.92c7.84 0 12.13-6.49 12.13-12.12 0-.18 0-.36-.01-.53A8.6 8.6 0 0 0 22.46 6z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-blue-500 hover:text-blue-700">
+                    <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12c0 4.84 3.68 8.87 8.41 9.78v-6.91H8.07v-2.87h2.34v-2.1c0-2.3 1.4-3.56 3.45-3.56.99 0 1.84.07 2.09.1v2.43H15c-1.21 0-1.45.58-1.45 1.42v1.87h2.9l-.38 2.87h-2.52V22C18.32 20.87 22 16.84 22 12c0-5.52-4.48-10-10-10z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-blue-500 hover:text-blue-700">
+                    <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M7.6 11.6V8h2.4V6.4c0-.64.16-1.23.48-1.76a2.83 2.83 0 0 1 1.36-1.12c.56-.24 1.18-.36 1.84-.36h2.4V6h-2.4c-.4 0-.72.12-.96.36-.24.24-.36.56-.36.96V8h3.6l-.48 3.6h-3.12V22H10v-10.4H7.6z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
